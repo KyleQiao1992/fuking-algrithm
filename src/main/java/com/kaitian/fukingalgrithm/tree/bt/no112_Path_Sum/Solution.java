@@ -9,7 +9,8 @@ public class Solution {
             return false;
 
         }
-        if ((root.left == null && root.right == null) && root.val == targetSum) {
+        if ((root.left == null && root.right == null) &&
+                root.val == targetSum) {
             return true;
         }
         return hasPathSum(root.left, targetSum - root.val) ||
