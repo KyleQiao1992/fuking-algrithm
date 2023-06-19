@@ -1,4 +1,4 @@
-package com.kaitian.fukingalgrithm.tree.bt.no617_Merge_Two_Binary_Trees;
+package com.kaitian.fukingalgrithm.tree.construct.no617_Merge_Two_Binary_Trees;
 
 import com.kaitian.fukingalgrithm.tree.TreeNode;
 
