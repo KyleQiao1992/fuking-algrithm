@@ -15,4 +15,14 @@ public class ListNode {
         this.val = val;
         this.next = next;
     }
+
+    public static ListNode build(int[] nums) {
+        ListNode dummyHead = new ListNode(-1);
+        ListNode p = dummyHead;
+        for (int num : nums) {
+            p.next = new ListNode(num);
+            p = p.next;
+        }
+        return dummyHead.next;
+    }
 }
