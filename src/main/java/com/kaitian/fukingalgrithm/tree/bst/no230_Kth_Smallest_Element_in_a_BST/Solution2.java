@@ -11,7 +11,6 @@ public class Solution2 {
         return res;
     }
 
-
     private Integer rank = 0;
     private Integer res = 0;
 

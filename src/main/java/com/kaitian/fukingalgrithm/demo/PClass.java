@@ -1,44 +1,48 @@
 package com.kaitian.fukingalgrithm.demo;
 
 import com.kaitian.fukingalgrithm.tree.TreeNode;
-import com.kaitian.fukingalgrithm.tree.ntree.Node;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import javax.swing.plaf.ListUI;
+import java.util.*;
 
 public class PClass {
 
-    public boolean isSubtree(TreeNode root, TreeNode subRoot) {
-        if (root == null) {
-            return subRoot == null;
-        }
+    public List<TreeNode> generateTrees(int n) {
 
-        if (isSameTree(root, subRoot)) {
-            return true;
-        }
-        return isSubtree(root.left, subRoot) || isSubtree(root.right, subRoot);
+        return build(1, n);
     }
 
-    private boolean isSameTree(TreeNode p, TreeNode q) {
-        if (p == null && q == null) {
-            return true;
+    //返回闭区间[lo,hi]组成的BST
+    private List<TreeNode> build(int lo, int hi) {
+        List<TreeNode> res = new LinkedList<>();
+        if (lo > hi) {
+            res.add(null);
+            return res;
         }
-        if (p == null || q == null) {
-            return false;
-        }
-        if (p.val != q.val) {
-            return false;
-        }
-        return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
-    }
 
+        for (int i = lo; i <= hi; i++) {
+
+            List<TreeNode> leftTree = build(lo, i - 1);
+            List<TreeNode> rightTree = build(i + 1, hi);
+
+            for (TreeNode left : leftTree) {
+                for (TreeNode right : rightTree) {
+                    TreeNode root = new TreeNode(i);
+                    root.left = left;
+                    root.right = right;
+
+                    res.add(root);
+                }
+            }
+        }
+        return res;
+    }
 
     public static void main(String[] args) {
         PClass f = new PClass();
-        Integer[] nums = {5, 4, 8, 11, null, 13, 4, 7, 2, null, null, 5, 1};
+        Integer[] nums = {1, 2, 3, null, null, 4, 5};
         TreeNode node = TreeNode.constructTree(nums);
-//        f.pathSum(node, 22);
+//        f.numTrees(3);
     }
 
 }
