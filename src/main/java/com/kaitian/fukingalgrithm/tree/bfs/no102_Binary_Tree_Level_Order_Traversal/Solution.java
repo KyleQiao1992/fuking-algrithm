@@ -1,4 +1,4 @@
-package com.kaitian.fukingalgrithm.tree.dfs.no102_Binary_Tree_Level_Order_Traversal;
+package com.kaitian.fukingalgrithm.tree.bfs.no102_Binary_Tree_Level_Order_Traversal;
 
 import com.kaitian.fukingalgrithm.tree.TreeNode;
 
