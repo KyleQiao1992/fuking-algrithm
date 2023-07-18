@@ -1,4 +1,4 @@
-package com.kaitian.fukingalgrithm.traceback.no47_Permutations_II;
+package com.kaitian.fukingalgrithm.backtrack.no47_Permutations_II;
 
 import java.util.Arrays;
 import java.util.LinkedList;
