@@ -11,7 +11,7 @@ public class Solution {
         }
 
         for (int i = 1; i < preSum.length; i++) {
-            int leftSum = preSum[i - 1] - preSum[0];
+            int leftSum = preSum[i - 1];
             int rightSum = preSum[len] - preSum[i];
 
             if (leftSum == rightSum) {
@@ -19,5 +19,11 @@ public class Solution {
             }
         }
         return -1;
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {1, 7, 3, 6, 5, 6};
+        Solution f = new Solution();
+        f.pivotIndex(nums);
     }
 }
