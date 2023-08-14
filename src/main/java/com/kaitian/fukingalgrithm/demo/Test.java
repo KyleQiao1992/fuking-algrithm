@@ -1,8 +1,10 @@
-package com.kaitian.fukingalgrithm.tree.bt.no1602_Find_Nearest_Right_Node_in_Binary_Tree;
+package com.kaitian.fukingalgrithm.demo;
 
 import com.kaitian.fukingalgrithm.tree.TreeNode;
 
-public class Solution {
+import java.util.*;
+
+public class Test {
     public TreeNode findNearestRightNode(TreeNode root, TreeNode u) {
         traverse(root, 0, u.val);
         return res;
@@ -31,5 +33,12 @@ public class Solution {
         // 二叉树遍历框架
         traverse(root.left, depth + 1, targetVal);
         traverse(root.right, depth + 1, targetVal);
+    }
+
+    public static void main(String[] args) {
+        Integer[] nums = {1, 2, 3, null, 4, 5, 6};
+        TreeNode node = TreeNode.constructTree(nums);
+        Test f = new Test();
+        f.findNearestRightNode(node, new TreeNode(4));
     }
 }
