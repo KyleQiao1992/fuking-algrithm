@@ -4,14 +4,14 @@ import com.kaitian.fukingalgrithm.tree.TreeNode;
 
 public class Solution {
 
-    private int depth = 0;
-    private int maxDepth = 0;
-    private TreeNode res = null;
-
     public int findBottomLeftValue(TreeNode root) {
         traverse(root);
-        return res.val;
+        return res;
     }
+
+    private int res = Integer.MIN_VALUE;
+    private int depth = 0;
+    private int curDepth = 0;
 
     private void traverse(TreeNode root) {
         if (root == null) {
@@ -19,12 +19,14 @@ public class Solution {
         }
 
         depth++;
-        if (depth > maxDepth) {
-            maxDepth = depth;
-            res = root;
+
+        if (depth >= curDepth) {
+            curDepth = depth;
+            res = root.val;
         }
-        traverse(root.left);
+
         traverse(root.right);
+        traverse(root.left);
         depth--;
     }
 }

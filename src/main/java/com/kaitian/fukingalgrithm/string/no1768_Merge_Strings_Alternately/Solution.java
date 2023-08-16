@@ -1,4 +1,4 @@
-package com.kaitian.fukingalgrithm.str.no1768_Merge_Strings_Alternately;
+package com.kaitian.fukingalgrithm.string.no1768_Merge_Strings_Alternately;
 
 public class Solution {
 
