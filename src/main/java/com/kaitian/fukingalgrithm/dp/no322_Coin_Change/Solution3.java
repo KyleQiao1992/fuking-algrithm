@@ -25,7 +25,7 @@ public class Solution3 {
     }
 
     public static void main(String[] args) {
-        Solution3 solution3=new Solution3();
-        solution3.coinChange(new int[]{2},3);
+        Solution3 solution3 = new Solution3();
+        solution3.coinChange(new int[]{2}, 3);
     }
 }
