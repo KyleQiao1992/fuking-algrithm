@@ -1,4 +1,4 @@
-package com.kaitian.fukingalgrithm.array.no367_Valid_Perfect_Square;
+package com.kaitian.fukingalgrithm.array.binary_search.no367_Valid_Perfect_Square;
 
 public class Solution {
 

@@ -1,8 +1,8 @@
-package com.kaitian.fukingalgrithm.array.no27_Remove_Element;
+package com.kaitian.fukingalgrithm.array.double_point.no27_Remove_Element;
 
 public class Solution {
 
-    //fast:寻找新数组的元素 ，新数组就是不含有目标元素的数组
+    //fast:找新元素
     //slow:指向更新 新数组下标的位置
     public int removeElement(int[] nums, int val) {
         int fast = 0;

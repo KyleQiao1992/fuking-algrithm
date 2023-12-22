@@ -1,4 +1,4 @@
-package com.kaitian.fukingalgrithm.array.no238_Product_of_Array_Except_Self;
+package com.kaitian.fukingalgrithm.array.double_point.no238_Product_of_Array_Except_Self;
 
 public class Solution {
 

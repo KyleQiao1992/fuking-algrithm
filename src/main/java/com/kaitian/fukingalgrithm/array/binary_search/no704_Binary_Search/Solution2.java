@@ -1,4 +1,4 @@
-package com.kaitian.fukingalgrithm.array.no704_Binary_Search;
+package com.kaitian.fukingalgrithm.array.binary_search.no704_Binary_Search;
 
 public class Solution2 {
 

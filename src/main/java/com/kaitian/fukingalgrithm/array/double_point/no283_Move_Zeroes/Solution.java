@@ -1,4 +1,4 @@
-package com.kaitian.fukingalgrithm.array.no283_Move_Zeroes;
+package com.kaitian.fukingalgrithm.array.double_point.no283_Move_Zeroes;
 
 public class Solution {
 
