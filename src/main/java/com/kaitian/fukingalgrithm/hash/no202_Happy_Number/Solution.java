@@ -4,35 +4,31 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class Solution {
-
-    private Set<Integer> res = new HashSet<>();
+    private Set<Integer> set = new HashSet<>();
 
     public boolean isHappy(int n) {
-
-        int originNum = n;
+        int res = 0;
         while (true) {
-            int sum = 0;
 
-            while (n != 0) {
-                int surplus = n % 10;
-                n = n / 10;
-                sum += surplus * surplus;
+            int num = n % 10;
+            res += num * num;
+            n = n / 10;
+            if (n == 0) {
+                if (res == 1) {
+                    return true;
+                }
+                if (set.contains(res)) {
+                    return false;
+                }
+                set.add(res);
+                n = res;
+                res = 0;
             }
-
-            if (sum == 1) {
-                return true;
-            }
-            if (res.contains(sum)) {
-                return false;
-            }
-            res.add(originNum);
-            originNum = sum;
-            n = sum;
         }
     }
 
     public static void main(String[] args) {
         Solution f = new Solution();
-        f.isHappy(3);
+        f.isHappy(19);
     }
 }

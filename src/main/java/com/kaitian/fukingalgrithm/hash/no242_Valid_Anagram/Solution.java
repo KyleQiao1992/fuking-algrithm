@@ -3,23 +3,28 @@ package com.kaitian.fukingalgrithm.hash.no242_Valid_Anagram;
 public class Solution {
 
     public boolean isAnagram(String s, String t) {
-        int[] count1 = encode(s);
-        int[] count2 = encode(t);
+        int[] matrix = new int[26];
 
-        for (int i = 0; i < count1.length; i++) {
-            if (count1[i] != count2[i]) {
+        for (char c : s.toCharArray()) {
+            int idx = c - 'a';
+            matrix[idx]++;
+        }
+
+        for (char c : t.toCharArray()) {
+            int idx = c - 'a';
+            matrix[idx]--;
+        }
+
+        for (int c : matrix) {
+            if (c != 0) {
                 return false;
             }
         }
         return true;
     }
 
-    private int[] encode(String s) {
-        int[] count = new int[26];
-        for (char c : s.toCharArray()) {
-            int delta = c - 'a';
-            count[delta]++;
-        }
-        return count;
+    public static void main(String[] args) {
+        Solution f = new Solution();
+        f.isAnagram("anagram", "nagaram");
     }
 }
