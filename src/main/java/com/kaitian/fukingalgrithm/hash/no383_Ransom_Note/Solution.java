@@ -4,18 +4,28 @@ package com.kaitian.fukingalgrithm.hash.no383_Ransom_Note;
 public class Solution {
 
     public boolean canConstruct(String ransomNote, String magazine) {
-        int[] magazineCntList = new int[26];
-        for (char c : magazine.toCharArray()) {
-            magazineCntList[c - 'a']++;
+        int[] ransomMatrix = new int[26];
+        for (int i = 0; i < ransomNote.length(); i++) {
+            ransomMatrix[ransomNote.charAt(i) - 'a']++;
         }
 
-        for (char c : ransomNote.toCharArray()) {
-            int cnt = magazineCntList[c - 'a'];
-            if (cnt <= 0) {
+        for (int i = 0; i < magazine.length(); i++) {
+            if (ransomMatrix[magazine.charAt(i) - 'a'] != 0) {
+                ransomMatrix[magazine.charAt(i) - 'a']--;
+            }
+        }
+
+        for (int num : ransomMatrix) {
+            if (num > 0) {
                 return false;
             }
-            magazineCntList[c - 'a']--;
         }
+
         return true;
+    }
+
+    public static void main(String[] args) {
+        Solution f = new Solution();
+        f.canConstruct("aa", "aab");
     }
 }
