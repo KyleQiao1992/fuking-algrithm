@@ -1,4 +1,4 @@
-package com.kaitian.fukingalgrithm.array.binary_search.no35_Search_Insert_Position;
+package com.kaitian.fukingalgrithm.array._binary_search.no35_Search_Insert_Position;
 
 public class Solution {
 

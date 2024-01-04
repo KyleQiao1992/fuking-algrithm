@@ -1,4 +1,4 @@
-package com.kaitian.fukingalgrithm.array.binary_search.no69_Sqrtx;
+package com.kaitian.fukingalgrithm.array._binary_search.no69_Sqrtx;
 
 public class Solution {
 

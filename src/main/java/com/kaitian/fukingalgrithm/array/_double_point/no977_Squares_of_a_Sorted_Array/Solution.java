@@ -1,4 +1,4 @@
-package com.kaitian.fukingalgrithm.array.double_point.no977_Squares_of_a_Sorted_Array;
+package com.kaitian.fukingalgrithm.array._double_point.no977_Squares_of_a_Sorted_Array;
 
 public class Solution {
 

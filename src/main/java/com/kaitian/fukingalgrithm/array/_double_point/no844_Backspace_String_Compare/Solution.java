@@ -1,4 +1,4 @@
-package com.kaitian.fukingalgrithm.array.double_point.no844_Backspace_String_Compare;
+package com.kaitian.fukingalgrithm.array._double_point.no844_Backspace_String_Compare;
 
 public class Solution {
 

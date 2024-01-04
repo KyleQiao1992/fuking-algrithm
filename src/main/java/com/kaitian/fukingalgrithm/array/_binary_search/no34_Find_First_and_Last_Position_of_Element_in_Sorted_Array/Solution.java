@@ -1,4 +1,4 @@
-package com.kaitian.fukingalgrithm.array.binary_search.no34_Find_First_and_Last_Position_of_Element_in_Sorted_Array;
+package com.kaitian.fukingalgrithm.array._binary_search.no34_Find_First_and_Last_Position_of_Element_in_Sorted_Array;
 
 public class Solution {
 

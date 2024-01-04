@@ -1,4 +1,4 @@
-package com.kaitian.fukingalgrithm.array.double_point.no27_Remove_Element;
+package com.kaitian.fukingalgrithm.array._double_point.no27_Remove_Element;
 
 public class Solution {
 
