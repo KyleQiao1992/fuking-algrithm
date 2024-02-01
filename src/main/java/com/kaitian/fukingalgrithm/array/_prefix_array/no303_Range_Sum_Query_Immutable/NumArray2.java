@@ -1,4 +1,4 @@
-package com.kaitian.fukingalgrithm.array.no303_Range_Sum_Query_Immutable;
+package com.kaitian.fukingalgrithm.array._prefix_array.no303_Range_Sum_Query_Immutable;
 
 public class NumArray2 {
     private int[] pre;

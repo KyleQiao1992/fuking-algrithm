@@ -1,4 +1,4 @@
-package com.kaitian.fukingalgrithm.array.no304_Range_Sum_Query_2D_Immutable;
+package com.kaitian.fukingalgrithm.array._prefix_array.no304_Range_Sum_Query_2D_Immutable;
 
 class NumMatrix {
     // 定义：preSum[i][j] 记录 matrix 中子矩阵 [0, 0, i-1, j-1] 的元素和
