@@ -1,4 +1,4 @@
-package com.kaitian.fukingalgrithm.stack.no225_Implement_Stack_using_Queues;
+package com.kaitian.fukingalgrithm.queue.no225_Implement_Stack_using_Queues;
 
 import java.util.LinkedList;
 import java.util.Queue;
