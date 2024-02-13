@@ -29,6 +29,12 @@ public class Solution {
                 continue;
             }
 
+            //这里为什么是!used[i-1] 其实是 used[i-1]==false
+            // 以 [1,1‘,2] 举例  第0层是[1,1',2]used:[0,0,0]
+            // 第1层是 [1] used[1,0,0] [1'] used[0,1,0] [2] used[0,0,1]
+            // 第2层是 [1,1'] used [1,1,0] [1,2] used[1,0,1] ....
+            // 其实就是不同层可以重复，但是同一层，有重复就不行了
+
             if (i > 0 && nums[i] == nums[i = 1] && !used[i - 1]) {
                 continue;
             }
