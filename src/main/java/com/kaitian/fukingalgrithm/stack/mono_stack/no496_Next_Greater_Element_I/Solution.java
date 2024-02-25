@@ -1,13 +1,8 @@
-package com.kaitian.fukingalgrithm.demo;
-
-import com.kaitian.fukingalgrithm.array._prefix_array.no560_Subarray_Sum_Equals_K.Solution;
-import com.kaitian.fukingalgrithm.linked_list.ListNode;
-import com.kaitian.fukingalgrithm.tree.TreeNode;
+package com.kaitian.fukingalgrithm.stack.mono_stack.no496_Next_Greater_Element_I;
 
 import java.util.*;
 
-public class Test {
-
+public class Solution {
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
         int[] greater = nextGreaterElement(nums2);
         Map<Integer, Integer> greaterMap = new HashMap<>();
@@ -35,11 +30,5 @@ public class Test {
             stk.push(num[i]);
         }
         return res;
-    }
-
-
-    public static void main(String[] args) {
-        Test f = new Test();
-        f.dailyTemperatures(new int[]{73, 74, 75, 71, 69, 76});
     }
 }

@@ -6,22 +6,17 @@ import java.util.Deque;
 public class Solution {
 
     public int[] dailyTemperatures(int[] temperatures) {
-        int len = temperatures.length;
-        int[] res = new int[len];
+        int n = temperatures.length;
+        int[] res = new int[n];
         Deque<Integer> stk = new ArrayDeque<>();
-        stk.push(0);
 
-        //stk存的是索引
-        for (int i = 1; i < len; i++) {
-            if (temperatures[i] <= temperatures[stk.peek()]) {
-                stk.push(i);
-            } else {
-                while (!stk.isEmpty() && temperatures[i] > temperatures[stk.peek()]) {
-                    res[stk.peek()] = i - stk.peek();
-                    stk.pop();
-                }
-                stk.push(i);
+        for (int i = n - 1; i >= 0; i--) {
+            while (!stk.isEmpty() && temperatures[stk.peek()] <= temperatures[i]) {
+                stk.pop();
             }
+
+            res[i] = stk.isEmpty() ? 0 : (stk.peek() - i);
+            stk.push(i);
         }
         return res;
     }
