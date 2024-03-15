@@ -13,11 +13,11 @@ public class Solution {
 
     public List<List<Integer>> combinationSum3(int k, int n) {
         this.target = n;
-        backtracking(9, k, 1);
+        backtracking(k, 1);
         return res;
     }
 
-    private void backtracking(int n, int k, int startIndex) {
+    private void backtracking(int k, int startIndex) {
         if (sum > target) {
             return;
         }
@@ -30,7 +30,7 @@ public class Solution {
         for (int i = startIndex; i <= 9 - (k - path.size()) + 1; i++) {
             path.add(i);
             sum += i;
-            backtracking(target, k, i + 1);
+            backtracking(k, i + 1);
             path.removeLast();
             sum -= i;
         }
